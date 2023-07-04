@@ -6,8 +6,9 @@ import io
 with io.open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
-with io.open("requirements.txt", encoding="utf-8") as f:
-    requirements = [r for r in f.read().split('\n') if len(r)]
+# conda_build not expanding requirements.txt?
+#with io.open("requirements.txt", encoding="utf-8") as f:
+#    requirements = [r for r in f.read().split('\n') if len(r)]
 
 setup(name="bip32",
       version=bip32.__version__,
@@ -19,5 +20,4 @@ setup(name="bip32",
       author_email="darosior@protonmail.com",
       license="MIT",
       packages=["bip32"],
-      keywords=["bitcoin", "bip32", "hdwallet"],
-      install_requires=requirements)
+      keywords=["bitcoin", "bip32", "hdwallet"])
