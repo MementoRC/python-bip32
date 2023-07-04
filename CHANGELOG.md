@@ -1,8 +1,12 @@
+# latest
+
+- conda_build does not seem to expand requirements.txt
+
+
 # 3.4
 
 - Support Coincurve up to version 18. This version includes support for BIP340 x-only keys and
   Schnorr signatures.
-
 
 # 3.3
 
